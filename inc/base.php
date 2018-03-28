@@ -11,44 +11,31 @@
 <body <?php body_class(); ?>>
 
 	<header id="masthead" class="site-header" role="banner">
-		<nav class="site-navigation">
-			<div class="navbar navbar-inverse navbar-fixed-top">
-				<div class="container">
-					<div class="site-navigation-inner">
-						<div class="navbar-header">
-						<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
 
-							<!-- Your site title as branding in the menu -->
-							<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><h1><?php bloginfo( 'name' ); ?></h1></a>
+		<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+      <!-- Your site title as branding in the menu -->
+      <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?>
+      </a>
 
-						</div><!-- .navbar-header -->
+      <!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-						<!-- The WordPress Menu goes here -->
-                        <div class="collapse navbar-collapse navbar-responsive-collapse">
-						  <?php wp_nav_menu(
-                              array(
-                                  'theme_location' => 'menu-1',
-                                  'depth' => 2,
-                                  'menu_id' => 'primary-menu',
-                                  'container_class' => false,
-                                  'menu_class' => 'nav navbar-nav',
-                                  'fallback_cb' => 'wp_bootstrap_navwalker::fallback',
-                                  // 'walker' 			=> new wp_bootstrap_navwalker()
-                              )
-                          ); ?>
-                          <div class="navbar-form navbar-right">
-                          	<?php get_search_form(); ?>
-                          </div>
-                        </div>
-					</div><!-- .site-navigation-inner -->
-				</div><!-- .container -->
-			</div><!-- .navbar -->
+				<!-- The WordPress Menu goes here -->
+        <div id="navbarSupportedContent" class="collapse navbar-collapse">
+				  <?php wp_nav_menu(
+              array(
+                  'theme_location' => 'menu-1',
+                  'depth' => 1,
+                  'menu_id' => 'primary-menu',
+                  'container_class' => false,
+                  'menu_class' => 'navbar-nav mr-auto',
+                  'fallback_cb' => 'wp_bootstrap_navwalker::fallback',
+                  // 'walker' 			=> new wp_bootstrap_navwalker()
+              )
+          ); ?>
+        </div>
 		</nav><!-- .site-navigation -->
 	</header><!-- #masthead -->
     
@@ -88,6 +75,7 @@
                   ) );
               ?>
           </div><!-- .entry-content -->
+      </article>
     <?php endwhile; endif; ?>
     </main>
 
