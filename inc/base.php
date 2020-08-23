@@ -100,7 +100,7 @@
         <div class="site-info text-center">
             &copy; <?php echo date('Y'); ?> JoseGuerraUK
             <span class="sep"> | </span>
-            <?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'joseguerrauk' ), 'JoseGuerraUK', '<a href="http://joseguerrauk.com/" rel="nofollow">Jose Guerra</a>' ); ?>
+            <?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'joseguerrauk' ), 'JoseGuerraUK', '<a href="http://joseguerra.uk/" rel="nofollow">Jose Guerra</a>' ); ?>
         </div><!-- .site-info -->
     </footer><!-- #colophon -->
 
